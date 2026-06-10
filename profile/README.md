@@ -4,6 +4,8 @@
 
 **Jinbocho** is an open-source home library management system designed to help families catalog, organize, and rediscover their physical book collections.
 
+[DEMO HERE](https://jinbocho.github.io/jinbocho-demo/)
+
 ---
 
 ## ✨ Features
