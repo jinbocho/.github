@@ -64,7 +64,8 @@ jinbocho-infrastructure  → Docker Compose orchestration, environment configs
 # Clone and setup
 git clone https://github.com/carmelolg/workspace-jinbocho
 cd workspace-jinbocho
-./start.sh
+cd jinbocho-infrastructure-v1
+./dev.sh
 ```
 
 **This starts:**
@@ -151,7 +152,8 @@ Each service is a separate Git repository (or can be monorepo):
 
 ```bash
 # Start everything
-./start.sh
+cd jinbocho-infrastructure-v1
+./dev.sh
 
 # Or manually:
 cd jinbocho-infrastructure-v1
