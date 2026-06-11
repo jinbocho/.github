@@ -1,12 +1,20 @@
+<div align="center">
+  <img src="https://raw.githubusercontent.com/carmelolg/workspace-jinbocho/main/jinbocho-docs/assets/jinbocho-logo.png" alt="Jinbocho Logo" width="140" height="140" />
+</div>
+
 # 神保町 Jinbocho
 
 > *Named after Tokyo's legendary booksellers' district — 古本屋街*
 
 **Jinbocho** is an open-source home library management system designed to help families catalog, organize, and rediscover their physical book collections.
 
-[LANDING PAGE](https://jinbocho.github.io/jinbocho-docs/)
-
-[DEMO HERE](https://jinbocho.github.io/jinbocho-demo/)
+<div align="center">
+  <strong>
+    <a href="https://jinbocho.github.io/jinbocho-docs/">📖 Homepage</a> 
+    · 
+    <a href="https://jinbocho.github.io/jinbocho-demo/">🚀 Live Demo</a>
+  </strong>
+</div>
 
 ---
 
