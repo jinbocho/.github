@@ -150,7 +150,7 @@ Each service is a separate Git repository (or can be monorepo):
 ## 🏫 Design Principles
 
 - **Home-first, enterprise-ready** — runs on a Raspberry Pi today, scales to the cloud tomorrow
-- **No vendor lock-in** — standard PostgreSQL, exportable data (CSV/JSON), AGPL license
+- **No vendor lock-in** — standard PostgreSQL, exportable data (CSV/JSON), CC BY-NC-ND 4.0 license
 - **Minimal cost** — designed around free tiers; no paid services required
 - **Clean architecture** — hexagonal layers, dependency inversion, testable use cases, 90%+ test coverage
 - **Multilingual** — support multiple languages from day one
@@ -208,9 +208,9 @@ python -m ruff check app tests  # Linting
 
 ## 📜 License
 
-All Jinbocho repositories are licensed under **[AGPL-3.0](https://www.gnu.org/licenses/agpl-3.0.html)**.
+All Jinbocho repositories are licensed under **[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)**.
 
-Any network-deployed modifications must be published as open source.
+This project is the exclusive intellectual property of Carmelo La Gamba. You may view and read the source code for transparency purposes, but modification, commercial use, and redistribution are restricted without explicit permission.
 
 ---
 
@@ -233,7 +233,7 @@ Any network-deployed modifications must be published as open source.
 
 ## 🤝 Contributing
 
-This is an open-source project licensed under AGPL-3.0. Contributions are welcome!
+This is a closed-source project licensed under CC BY-NC-ND 4.0. Contributions require explicit permission.
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
