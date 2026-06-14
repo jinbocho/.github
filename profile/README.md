@@ -6,13 +6,17 @@
 
 > *Named after Tokyo's legendary booksellers' district — 古本屋街*
 
-**Jinbocho** is an open-source home library management system designed to help families catalog, organize, and rediscover their physical book collections.
+**Jinbocho** is a source-available home library management system designed to help families catalog, organize, and rediscover their physical book collections.
+
+**Source-available — Community use free, commercial services available.**
 
 <div align="center">
   <strong>
     <a href="https://jinbocho.github.io/jinbocho-docs/">📖 Homepage</a> 
     · 
     <a href="https://jinbocho.github.io/jinbocho-demo/">🚀 Live Demo</a>
+    ·
+    <a href="https://jinbocho.github.io/managed-install/">🛠️ Managed Install</a>
   </strong>
 </div>
 
@@ -32,7 +36,7 @@
 - 🔐 **Secure authentication** — JWT-based auth with refresh token rotation, password reset via email
 - 📤 **Book loans** — track books lent to family members with due dates
 - 📊 **Dashboard stats** — family reading trends, books by room, unread books, reading goals
-- 🤖 **AI suggestions** *(coming soon)* — automatic tagging, duplicate detection, reading recommendations
+- 🤖 **AI suggestions** *(Pro edition)* — automatic tagging, duplicate detection, reading recommendations
 
 ---
 
@@ -56,7 +60,7 @@ jinbocho-catalog-v1      → Books, locations, ISBN ingestion, search, export (P
   ├── 40+ use cases, domain entities, repository pattern
   └── Ownership & reading history tracking
 
-jinbocho-ai-v1           → AI-powered suggestions (Python · FastAPI) [Phase 4 — future]
+jinbocho-ai-v1           → AI-powered suggestions (Python · FastAPI) [Pro edition]
 
 jinbocho-infrastructure  → Docker Compose orchestration, environment configs
 ```
@@ -89,6 +93,20 @@ cd jinbocho-infrastructure-v1
 
 ---
 
+## 🛠️ Managed Installation Service
+
+Prefer to skip the setup? A **managed installation service** is available:
+deploy Jinbocho on your own server or private cloud, fully configured and production-ready.
+
+- ✅ Full installation on your infrastructure (VPS, Render, Railway, self-hosted)
+- ✅ Production configuration and hardening
+- ✅ Optional AI module setup (Pro edition)
+- ✅ One-time fee, your data stays yours
+
+[Learn more →](https://jinbocho.github.io/managed-install/)
+
+---
+
 ## 🛠️ Tech Stack
 
 **Frontend**
@@ -118,7 +136,7 @@ cd jinbocho-infrastructure-v1
 | **Phase 2** — Catalog | ✅ **Complete** | Locations, books, ISBN ingestion, search, export, ownership, reading history |
 | **Phase 3** — Gateway + Frontend | ✅ **Complete** | API gateway, React SPA (all 15+ pages built and integrated) |
 | **Phase 3.5** — Internationalization | ✅ **Complete** (2026-06-10) | EN/IT/ES/FR with backend + localStorage persistence |
-| **Phase 4** — AI | 💡 **In Design** | Tagging, deduplication, reading recommendations |
+| **Phase 4** — AI | 💡 **In Design** | Tagging, deduplication, reading recommendations (Pro edition) |
 
 ### Recent Milestones (June 2026)
 
@@ -141,7 +159,7 @@ Each service is a separate Git repository (or can be monorepo):
 | **Auth Service** | Python | FastAPI + PostgreSQL | ✅ Complete |
 | **Catalog Service** | Python | FastAPI + PostgreSQL | ✅ Complete (Phase 12 in progress) |
 | **API Gateway** | Python | FastAPI | ✅ Complete |
-| **AI Service** | Python | FastAPI | 💡 Planned |
+| **AI Service** | Python | FastAPI | 💡 Pro edition |
 | **Infrastructure** | YAML | Docker Compose | ✅ Complete |
 | **Docs** | Markdown | — | ✅ Complete |
 
@@ -150,7 +168,7 @@ Each service is a separate Git repository (or can be monorepo):
 ## 🏫 Design Principles
 
 - **Home-first, enterprise-ready** — runs on a Raspberry Pi today, scales to the cloud tomorrow
-- **No vendor lock-in** — standard PostgreSQL, exportable data (CSV/JSON), CC BY-NC-ND 4.0 license
+- **No vendor lock-in** — standard PostgreSQL, exportable data (CSV/JSON), source-available license
 - **Minimal cost** — designed around free tiers; no paid services required
 - **Clean architecture** — hexagonal layers, dependency inversion, testable use cases, 90%+ test coverage
 - **Multilingual** — support multiple languages from day one
@@ -208,16 +226,20 @@ python -m ruff check app tests  # Linting
 
 ## 📜 License
 
-All Jinbocho repositories are licensed under **[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)**.
+**Source-available — Community use free, commercial services available.**
 
-This project is the exclusive intellectual property of Carmelo La Gamba. You may view and read the source code for transparency purposes, but modification, commercial use, and redistribution are restricted without explicit permission.
+Public repositories use the [Jinbocho Source-Available License](LICENSE):
+personal, non-commercial use is free; commercial use and redistribution require permission.
+
+This project is the exclusive intellectual property of Carmelo La Gamba.
+For commercial licensing or managed installation: jinbochoapp@gmail.com
 
 ---
 
 ## 🎯 Roadmap
 
 **Upcoming (Phase 4)**
-- AI service for intelligent tagging
+- AI service for intelligent tagging (Pro edition)
 - Duplicate book detection
 - Personalized reading recommendations
 - Advanced search filters (by condition, source, date range)
@@ -233,7 +255,7 @@ This project is the exclusive intellectual property of Carmelo La Gamba. You may
 
 ## 🤝 Contributing
 
-This is a closed-source project licensed under CC BY-NC-ND 4.0. Contributions require explicit permission.
+This is a source-available project. Contributions require explicit permission from the copyright holder.
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
