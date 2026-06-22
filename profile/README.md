@@ -8,7 +8,7 @@
 
 **Jinbocho** is a source-available home library management system designed to help families catalog, organize, and rediscover their physical book collections.
 
-**Source-available — Community use free, commercial services available.**
+**Source-available — free for personal, non-commercial use.**
 
 <div align="center">
   <strong>
@@ -16,7 +16,7 @@
     · 
     <a href="https://jinbocho.github.io/jinbocho-demo/">🚀 Live Demo</a>
     ·
-    <a href="https://jinbocho.github.io/managed-install/">🛠️ Managed Install</a>
+    <a href="https://jinbocho.github.io/manuals/">📘 Manuals</a>
   </strong>
 </div>
 
@@ -36,7 +36,22 @@
 - 🔐 **Secure authentication** — JWT-based auth with refresh token rotation, password reset via email
 - 📤 **Book loans** — track books lent to family members with due dates
 - 📊 **Dashboard stats** — family reading trends, books by room, unread books, reading goals
-- 🤖 **AI suggestions** *(Pro edition)* — automatic tagging, duplicate detection, reading recommendations
+- 🤖 **AI suggestions** *(in design)* — automatic tagging, duplicate detection, reading recommendations
+
+### Why Jinbocho?
+
+The intersection of **self-hosted + a physical map of your shelves + family sharing**
+is empty. Other tools track your *reading list* or your *catalog*; none tell you the
+book is *on the third shelf of the bookcase in the study*. Jinbocho does.
+
+| | Goodreads | Libib / LibraryThing | **Jinbocho** |
+|---|:---:|:---:|:---:|
+| Track what you've read | ✅ | ✅ | ✅ |
+| Catalog what you own | ❌ | ✅ | ✅ |
+| **Physical shelf location** | ❌ | ❌ | **✅** |
+| Self-hosted / your data | ❌ | ❌ | **✅** |
+| Multi-user family + lending | ❌ | partial | **✅** |
+| Source-available (community use) | ❌ | ❌ | **✅** |
 
 ---
 
@@ -60,7 +75,7 @@ jinbocho-catalog-v1      → Books, locations, ISBN ingestion, search, export (P
   ├── 40+ use cases, domain entities, repository pattern
   └── Ownership & reading history tracking
 
-jinbocho-ai-v1           → AI-powered suggestions (Python · FastAPI) [Pro edition]
+jinbocho-ai-v1           → AI-powered suggestions (Python · FastAPI) [in design]
 
 jinbocho-infrastructure  → Docker Compose orchestration, environment configs
 ```
@@ -78,10 +93,9 @@ jinbocho-infrastructure  → Docker Compose orchestration, environment configs
 
 ```bash
 # Clone and setup
-git clone https://github.com/carmelolg/workspace-jinbocho
-cd workspace-jinbocho
+git clone https://github.com/jinbocho/jinbocho-infrastructure-v1
 cd jinbocho-infrastructure-v1
-./dev.sh
+./scripts/dev.sh
 ```
 
 **This starts:**
@@ -91,19 +105,7 @@ cd jinbocho-infrastructure-v1
 
 **First build takes ~2 minutes.**
 
----
-
-## 🛠️ Managed Installation Service
-
-Prefer to skip the setup? A **managed installation service** is available:
-deploy Jinbocho on your own server or private cloud, fully configured and production-ready.
-
-- ✅ Full installation on your infrastructure (VPS, Render, Railway, self-hosted)
-- ✅ Production configuration and hardening
-- ✅ Optional AI module setup (Pro edition)
-- ✅ One-time fee, your data stays yours
-
-[Learn more →](https://jinbocho.github.io/managed-install/)
+For detailed setup instructions, see the [Developer Manual](https://jinbocho.github.io/manuals/developer/).
 
 ---
 
@@ -136,7 +138,7 @@ deploy Jinbocho on your own server or private cloud, fully configured and produc
 | **Phase 2** — Catalog | ✅ **Complete** | Locations, books, ISBN ingestion, search, export, ownership, reading history |
 | **Phase 3** — Gateway + Frontend | ✅ **Complete** | API gateway, React SPA (all 15+ pages built and integrated) |
 | **Phase 3.5** — Internationalization | ✅ **Complete** (2026-06-10) | EN/IT/ES/FR with backend + localStorage persistence |
-| **Phase 4** — AI | 💡 **In Design** | Tagging, deduplication, reading recommendations (Pro edition) |
+| **Phase 4** — AI | 💡 **In Design** | Tagging, deduplication, reading recommendations |
 
 ### Recent Milestones (June 2026)
 
@@ -159,7 +161,7 @@ Each service is a separate Git repository (or can be monorepo):
 | **Auth Service** | Python | FastAPI + PostgreSQL | ✅ Complete |
 | **Catalog Service** | Python | FastAPI + PostgreSQL | ✅ Complete (Phase 12 in progress) |
 | **API Gateway** | Python | FastAPI | ✅ Complete |
-| **AI Service** | Python | FastAPI | 💡 Pro edition |
+| **AI Service** | Python | FastAPI | 💡 In Design |
 | **Infrastructure** | YAML | Docker Compose | ✅ Complete |
 | **Docs** | Markdown | — | ✅ Complete |
 
@@ -178,78 +180,28 @@ Each service is a separate Git repository (or can be monorepo):
 
 ## 🛠️ Development
 
-### Local Setup
-
-```bash
-# Start everything
-cd jinbocho-infrastructure-v1
-./dev.sh
-
-# Or manually:
-cd jinbocho-infrastructure-v1
-docker compose up -d --build
-
-# Run migrations
-docker compose exec auth-service alembic upgrade head
-docker compose exec catalog-service alembic upgrade head
-
-# Start frontend
-cd ../jinbocho-fe
-npm install && npm run dev
-```
-
-### Type Checking & Tests
-
-```bash
-# Frontend
-cd jinbocho-fe
-npm run typecheck  # TypeScript strict mode
-npm run test       # Unit tests
-
-# Backend (example: auth service)
-cd jinbocho-auth-v1
-python -m mypy app --strict     # Type checking
-python -m pytest tests/ -v      # Test suite
-python -m ruff check app tests  # Linting
-```
+Local setup, backend/frontend workflows, database migrations, CI/CD, and
+troubleshooting are documented in the
+[Developer Manual](https://jinbocho.github.io/manuals/developer/).
 
 ---
 
 ## 📚 Documentation
 
-- **Architecture** — see `/jinbocho-docs/architecture/`
-- **API** — see OpenAPI Swagger at `http://localhost:8000/docs` (when running)
-- **Database schema** — see `/jinbocho-docs/`
-- **Refactoring plans** — see `/jinbocho-claude/BACKLOG_CATALOG.md` (Phase 12 cleanup in progress)
+Full documentation — developer manual, user manual, and architecture — is available at
+**[jinbocho.github.io/manuals](https://jinbocho.github.io/manuals/)**.
 
 ---
 
 ## 📜 License
 
-**Source-available — Community use free, commercial services available.**
+**Source-available — free for personal, non-commercial use.**
 
 Public repositories use the [Jinbocho Source-Available License](LICENSE):
 personal, non-commercial use is free; commercial use and redistribution require permission.
 
 This project is the exclusive intellectual property of Carmelo La Gamba.
-For commercial licensing or managed installation: jinbochoapp@gmail.com
-
----
-
-## 🎯 Roadmap
-
-**Upcoming (Phase 4)**
-- AI service for intelligent tagging (Pro edition)
-- Duplicate book detection
-- Personalized reading recommendations
-- Advanced search filters (by condition, source, date range)
-
-**Future (Phase 5+)**
-- Mobile app (React Native)
-- Book clubs and reading groups
-- Integration with Goodreads/OpenLibrary (bidirectional sync)
-- Advanced analytics and reading trends
-- Social features (family sharing, wishlists)
+For commercial licensing inquiries: jinbochoapp@gmail.com
 
 ---
 
@@ -270,7 +222,7 @@ This is a source-available project. Contributions require explicit permission fr
   <br />
   <em>Because home libraries deserve to be seen</em>
   <br /><br />
-  <a href="https://github.com/carmelolg/workspace-jinbocho">View on GitHub</a> •
+  <a href="https://github.com/jinbocho">View on GitHub</a> •
   <a href="#quick-start">Get Started</a> •
   <a href="#documentation">Documentation</a>
 </p>
