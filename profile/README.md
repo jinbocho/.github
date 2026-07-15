@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/jinbocho/jinbocho-docs/blob/68902373946031d21da699b3c4ff8da513204182/assets/jinbocho-logo.png" alt="Jinbocho Logo" width="140" height="140" />
+  <img src="https://github.com/jinbocho/jinbocho.github.io/blob/58d0beff24089f3d9abdf3ba8e3274188a6882e9/assets/jinbocho-logo.png" alt="Jinbocho Logo" width="140" height="140" />
 </div>
 
 # 神保町 Jinbocho
