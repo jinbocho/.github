@@ -6,11 +6,11 @@
 
 > *Named after Tokyo's legendary booksellers' district — 古本屋街*
 
-**Jinbocho** is a source-available home library management system that helps
+**Jinbocho** is a free, self-hosted home library management system that helps
 families and shared households catalog, organize, and rediscover their
 physical book collections — down to the exact shelf a book is sitting on.
 
-**Source-available — free for personal, non-commercial use.**
+**Free to self-host, closed source — free for personal, non-commercial use.**
 
 <div align="center">
   <strong>
@@ -54,7 +54,7 @@ photograph that shelf and have it cataloged for you.
 | **Photo-to-catalog (Shelf Scan)** | ❌ | ❌ | **✅** *(Pro)* |
 | Self-hosted / your data | ❌ | ❌ | **✅** |
 | Multi-user household + lending | ❌ | partial | **✅** |
-| Source-available (community use) | ❌ | ❌ | **✅** |
+| Free self-host (community use) | ❌ | ❌ | **✅** |
 
 ---
 
@@ -78,8 +78,8 @@ jinbocho-ai-v1                         AI features (Python · FastAPI): incipit 
                                         suggestions, recommendations, duplicate detection, vision-based
                                         shelf scan — cleanly disabled when no LLM key is configured
 
-jinbocho-infrastructure-community-v1   Docker Compose orchestration, GHCR images, one-command VPS install
-jinbocho-infrastructure-pro-v1         AI module overlay (licensed)
+jinbocho-install-community-v1   Docker Compose orchestration, GHCR images, one-command VPS install
+jinbocho-install-pro-v1         AI module overlay (licensed)
 ```
 
 **All backend services** follow **Clean/Hexagonal Architecture** with:
@@ -94,8 +94,8 @@ jinbocho-infrastructure-pro-v1         AI module overlay (licensed)
 ## Quick Start
 
 ```bash
-git clone https://github.com/jinbocho/jinbocho-infrastructure-community-v1.git
-cd jinbocho-infrastructure-community-v1
+git clone https://github.com/jinbocho/jinbocho-install-community-v1.git
+cd jinbocho-install-community-v1
 sudo ./scripts/setup-vps-community.sh --domain your-domain.com --email you@example.com
 ```
 
@@ -174,7 +174,7 @@ Each service is a separate Git repository:
 ## Design Principles
 
 - **Home-first, enterprise-ready** — runs on a Raspberry Pi or a small VPS today, scales to Kubernetes tomorrow
-- **No vendor lock-in** — standard PostgreSQL, exportable data (CSV/JSON), source-available license
+- **No vendor lock-in** — standard PostgreSQL, exportable data (CSV/JSON), free self-host
 - **AI is optional, never required** — every AI-backed feature degrades cleanly and disappears from the UI when no LLM key is configured
 - **Clean architecture** — hexagonal layers, dependency inversion, testable use cases
 - **Multilingual** — support multiple languages from day one
@@ -191,24 +191,27 @@ Full documentation — developer manual, user manual, and architecture — is av
 
 ## License
 
-**Source-available — free for personal, non-commercial use.**
+**Free to self-host, closed source — free for personal, non-commercial use.**
 
-Public repositories use the [Jinbocho Source-Available License](LICENSE):
-personal, non-commercial use is free; commercial use, redistribution, and
-hosted/managed services require permission. The optional AI module
-(`jinbocho-ai-v1`) is distributed separately under a Pro license — see
+Application source is closed. Self-hosting is free for personal, non-commercial
+use via pre-built Docker images — see [Quick Start](#quick-start). Everything is
+distributed under the [Jinbocho Commercial License](LICENSE): personal,
+non-commercial use is free; commercial use, redistribution, and hosted/managed
+services require permission. The optional AI module (`jinbocho-ai-v1`) is
+distributed separately under a Pro license — see
 [Pricing](https://jinbocho.github.io/pricing/).
 
 This project is the exclusive intellectual property of Carmelo La Gamba.
-For commercial licensing inquiries: jinbochoapp@gmail.com
+For commercial licensing inquiries: info@jinbocho.eu
 
 ---
 
 ## Contributing
 
-This is a source-available project — contributions require explicit permission
-from the copyright holder before you start work. Open an issue or write to
-jinbochoapp@gmail.com to discuss a change before submitting a pull request.
+Application source is closed; only `jinbocho-install-community-v1`
+(install tooling, Docker Compose) is public. Found a bug in the installer or
+want to improve it? Open an issue or PR there. For anything else, write to
+info@jinbocho.eu to discuss before you start work.
 
 ---
 
