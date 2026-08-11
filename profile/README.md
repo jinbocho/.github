@@ -4,6 +4,10 @@
 
 # 神保町 Jinbocho
 
+[![Website](https://img.shields.io/badge/website-jinbocho.github.io-blue)](https://jinbocho.github.io)
+[![License](https://img.shields.io/badge/license-Commercial-lightgrey)](https://github.com/jinbocho/jinbocho-install-community-v1/blob/main/LICENSE)
+[![Docs](https://img.shields.io/badge/docs-manuals-informational)](https://jinbocho.github.io/manuals/)
+
 > *Named after Tokyo's legendary booksellers' district — 古本屋街*
 
 **Jinbocho** is a free, self-hosted home library management system that helps
@@ -208,10 +212,11 @@ For commercial licensing inquiries: info@jinbocho.eu
 
 ## Contributing
 
-Application source is closed; only `jinbocho-install-community-v1`
-(install tooling, Docker Compose) is public. Found a bug in the installer or
-want to improve it? Open an issue or PR there. For anything else, write to
-info@jinbocho.eu to discuss before you start work.
+Closed-source — no code PRs on any Jinbocho repo, so project ownership stays
+unambiguous. Found a bug in the installer or want a new flag? Open an issue on
+[jinbocho-install-community-v1](https://github.com/jinbocho/jinbocho-install-community-v1)
+(the only public repo with install tooling / Docker Compose). For anything
+else, write to info@jinbocho.eu.
 
 ---
 
