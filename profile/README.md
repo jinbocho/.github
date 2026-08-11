@@ -5,10 +5,10 @@
 # 神保町 Jinbocho
 
 [![Website](https://img.shields.io/badge/website-jinbocho.github.io-blue)](https://jinbocho.github.io)
-[![Demo](https://img.shields.io/badge/demo-jinbocho.github.io-blue)](https://jinbocho.github.io/jinbocho-demo)
+[![Demo](https://img.shields.io/badge/jinbocho-demo-blue)](https://jinbocho.github.io/jinbocho-demo)
 [![License](https://img.shields.io/badge/license-Commercial-lightgrey)](https://github.com/jinbocho/jinbocho-install-community-v1/blob/main/LICENSE)
 [![Docs](https://img.shields.io/badge/docs-manuals-informational)](https://jinbocho.github.io/manuals/)
-[![Docs](https://img.shields.io/badge/pricing-jinbocho.github.io-informational)](https://jinbocho.github.io/pricing/)
+[![Docs](https://img.shields.io/badge/jinbocho-pricing-informational)](https://jinbocho.github.io/pricing/)
 
 > *Named after Tokyo's legendary booksellers' district — 古本屋街*
 
