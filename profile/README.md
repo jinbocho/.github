@@ -5,8 +5,10 @@
 # 神保町 Jinbocho
 
 [![Website](https://img.shields.io/badge/website-jinbocho.github.io-blue)](https://jinbocho.github.io)
+[![Demo](https://img.shields.io/badge/demo-jinbocho.github.io-blue)](https://jinbocho.github.io/jinbocho-demo)
 [![License](https://img.shields.io/badge/license-Commercial-lightgrey)](https://github.com/jinbocho/jinbocho-install-community-v1/blob/main/LICENSE)
 [![Docs](https://img.shields.io/badge/docs-manuals-informational)](https://jinbocho.github.io/manuals/)
+[![Docs](https://img.shields.io/badge/pricing-jinbocho.github.io-informational)](https://jinbocho.github.io/pricing/)
 
 > *Named after Tokyo's legendary booksellers' district — 古本屋街*
 
@@ -15,18 +17,6 @@ families and shared households catalog, organize, and rediscover their
 physical book collections — down to the exact shelf a book is sitting on.
 
 **Free to self-host, closed source — free for personal, non-commercial use.**
-
-<div align="center">
-  <strong>
-    <a href="https://jinbocho.github.io">Homepage</a>
-    ·
-    <a href="https://jinbocho.github.io/jinbocho-demo/">Live Demo</a>
-    ·
-    <a href="https://jinbocho.github.io/pricing/">Pricing</a>
-    ·
-    <a href="https://jinbocho.github.io/manuals/">Manuals</a>
-  </strong>
-</div>
 
 ---
 
